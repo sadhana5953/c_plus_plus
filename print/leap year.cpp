@@ -16,12 +16,8 @@ main()
 	{
 		if(x%4==0)
 		{
-			for(i=0;i<n;i++)
-			{
-				a[i]=x;
-				x+=4;
-			}
-			break;
+			a[i]=x;
+			i++;
 		}
 	}
 	cout << "\nLeap year : ";
