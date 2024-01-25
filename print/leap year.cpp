@@ -10,7 +10,7 @@ main()
 	
 	int n=(y-x)/4+1;
 	
-	int a[n],i;
+	int a[n],i=0;
 	
 	for(;x<=y;x++)
 	{
