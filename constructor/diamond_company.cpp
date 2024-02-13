@@ -29,9 +29,9 @@ class Company
 		this ->ceo = ceo;
 	}
 	
-	void get(int i)
+	void get()
 	{
-		cout << "Company ["<<i<<"] Information :-\n";
+		cout << "Company Information :-\n";
 		cout << "Comapny id : " << id <<endl;
 		cout << "Comapny name : " << comp <<endl;
 		cout << "Comapny staff quantity : " << staff <<endl;
@@ -46,13 +46,7 @@ main()
 	int id,s,r,rd,d,n;
 	string name,comp;
 	
-	cout << "enter the value of n : ";
-	cin >> n;
-	Company c1[n]=Company(id,name,s,r,rd,d,comp); 
-		
-	for(int i=0;i<n;i++)
-	{
-		cout << "enter company ["<<i+1<<"] information :\n";
+		cout << "enter company information :\n";
 		cout << "enter company id : ";
 		cin >> id;
 		cin.ignore();
@@ -69,12 +63,9 @@ main()
 		cin.ignore();
 		cout << "enter company ceo name : ";
 		getline(cin,comp);
-		c1[i]=Company(id,name,s,r,rd,d,comp);
+		//c1[i]=Company(id,name,s,r,rd,d,comp);
 		cout <<endl;
-	}
 	
-	for(int i=0;i<n;i++)
-	{
-		c1[i].get(i+1);
-	}	
+	Company c1(id,name,s,r,rd,d,comp);
+	c1.get();
 }
